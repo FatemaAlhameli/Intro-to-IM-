@@ -1,7 +1,7 @@
 
 ## Assignment 2: Loops
 
-[Simple art using loops](https://editor.p5js.org/FatemaAlhameli/sketches/i_dG9Pp3W0)
+[Simple art using loops](https://editor.p5js.org/FatemaAlhameli/sketches/i_dG9Pp3W)
 
 When I started this assignment I first kept creating for loops with ellipses and rectangles. However, I felt the drawing still looked boring. So I started over and began to explore creating lines with for loops. I kept playing around with the line loop until I got this combination of horizontal and vertical lines dragged, which looked pretty interesting. I then attempted and succeeded to do the same on the top right corner. To add more lines I created separated diagonal lines from the bottom left corner up to the middle. Then I did the same thing for the top right corner, which led them all to connect. Lastly, I added a diagonal row of ellipses from the top left corner to the bottom right corner. 
 
