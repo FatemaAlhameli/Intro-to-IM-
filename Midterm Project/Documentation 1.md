@@ -26,11 +26,11 @@ let size = 40;
 let cells = [];
 function setup() {
   createCanvas(400, 400);
-
+  // Size of cells
   cols = floor(width / size);
   rows = floor(height / size);
   frameRate(5);
-
+  //Loops to create all the cells in the rows and columns and store in an array
   for (let i = 0; i < cols; i++) {
     for (let j = 0; j < rows; j++) {
       let cell = new Cell(j, i);
@@ -42,6 +42,7 @@ function setup() {
 
 function draw() {
   background(220);
+  // Loop through all cells to display on canvas
   for (let i = 0; i < cells.length; i++) {
     cells[i].show();
   }
@@ -52,6 +53,7 @@ function draw() {
     current = next;
   }
 }
+
 function index(i, j) {
   if (i < 0 || j < 0 || i > cols - 1 || j > rows - 1) {
     return -1;
@@ -59,6 +61,7 @@ function index(i, j) {
   return i + j * cols;
 }
 
+//Cell objects with i = columns and j = rows
 function Cell(i, j) {
   this.i = i;
   this.j = j;
@@ -67,6 +70,7 @@ function Cell(i, j) {
   this.checkNeighbors = function () {
     let neighbors = [];
 
+    // For Neighboring Cells
     let top = cells[index(i, j - 1)];
     let right = cells[index(i + 1, j)];
     let bottom = cells[index(i, j + 1)];
@@ -84,6 +88,7 @@ function Cell(i, j) {
     if (left && !left.visited) {
       neighbors.push(left);
     }
+    // Random cells selected
     if (neighbors.length > 0) {
       let r = floor(random(0, neighbors.length));
       return neighbors[r];
@@ -96,6 +101,8 @@ function Cell(i, j) {
     let x = this.j * size;
     let y = this.i * size;
     stroke(255);
+
+    // Walls of a single cell
     if (this.walls[0]) {
       line(x, y, x + size, y);
     }
@@ -111,10 +118,12 @@ function Cell(i, j) {
     if (this.walls[3]) {
       line(x, y + size, x, y);
     }
+    // If a cell(square) is visted it will be colored green
     if (this.visited) {
       fill(52, 235, 58, 100);
       rect(x, y, size, size);
     }
   };
 }
+
 ```
