@@ -24,6 +24,12 @@ Similar to an array, a stack is another form of a data structure that literally 
 
 ![Maze Progress2](https://github.com/FatemaAlhameli/Intro-to-IM-/blob/main/Maze%20progress%202.png)
 
+#### Next Steps in Maze Creation:
+
+- Clean up code: I will need to move my class function into a separate file to have a cleaner code.
+- Try and figure out how to have my program begin with a maze rather than wait for it to be generated.
+- Add an endpoint, to show the player where they should strive to reach.
+
 [Current Code Progress](https://editor.p5js.org/FatemaAlhameli/sketches/mRNiGuhJ0)
 ```
 let cols;
