@@ -182,7 +182,7 @@ function removeWalls(a, b) {
 ```
 
 
-After creating the maze generator, I came to the conclusion that a maze generator does not fit the context/idea of my game. Since I wanted a specific endpoint to be in the game, that was not possible with the generator since it created a different maze every time the program runs. Therefore, I decided to use the grid game example provided by the professor to create my own maze. By using the grid, I was able to color the boxes I wanted to act as the paths in the maze. As shown in the image below, the brown colored boxed are the walls in the maze and the blue colored boxes are the pathways. After creating the maze, I decided to add my object which is a boat. By using the class and object functions I was able to let the boat move by pressing on the arrow keys.
+After creating the maze generator, I came to the conclusion that a maze generator does not fit the context/idea of my game. Since I wanted a specific endpoint to be in the game, that was not possible with the generator since it created a different maze every time the program runs. Therefore, I decided to use the [grid game example](https://editor.p5js.org/itp42/sketches/dBeLZC8mm) provided by the professor to create my own maze. By using the grid, I was able to color the boxes I wanted to act as the paths in the maze. As shown in the image below, the brown colored boxed are the walls in the maze and the blue colored boxes are the pathways. After creating the maze, I decided to add my object which is a boat. By using the class and object functions I was able to let the boat move by pressing on the arrow keys.
 
 
 ![Image](https://github.com/FatemaAlhameli/Intro-to-IM-/blob/main/New%20maze%201.png)
