@@ -323,6 +323,7 @@ function draw() {
       noStroke();
       boat = new Boat(-15, -45);
       gameGrid = new Grid(25, 17, 17);
+      isSoundPlaying = false;
       timer = 35;
       xL = 421;
       loop();
