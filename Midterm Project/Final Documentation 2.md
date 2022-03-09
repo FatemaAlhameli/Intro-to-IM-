@@ -10,7 +10,7 @@
 
 
 
-[Link to play the game](https://editor.p5js.org/FatemaAlhameli/full/RcoDaoymz)
+[To play the game](https://editor.p5js.org/FatemaAlhameli/full/RcoDaoymz)
 
 ## Game Description 
 
