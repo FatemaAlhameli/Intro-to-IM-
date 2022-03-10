@@ -57,7 +57,7 @@ For the game, the player can restart the game once they have lost or won by pres
 
 ## Sound
 
-For sound, I had the idea of adding sound effects to when the player wins or loses. Therefore, I downloaded two mp3 sound effect files in my assets folder and named them accordingly to win or lose sound effects. I then loaded the sound in my preload function and added them to the “You Win” and “Game Over” screens. However, when I played the game and restarted, the lost sound effect would still keep on playing.  To solve this problem, I needed to add and initialize a new variable called ``` let isSoundPlaying = false;```. Using this variable, I created an if statement in the code of the “You Win” and “Game Over” screens stating that sound should not play since it is equal to false, but if the player wins or loses the variable ```isSoundPlaying```  should equal true. 
+For sound, I had the idea of adding sound effects to when the player wins or loses. Therefore, I downloaded two mp3 sound effect files in my assets folder and named them accordingly to win or lose sound effects. I then loaded the sound in my preload function and added them to the “You Win” and “Game Over” screens. However, when I played the game and restarted, the lost sound effect would still keep on playing.  To solve this problem, I needed to add and initialize a new variable called ``` let isSoundPlaying = false;```. Using this variable, I created an if statement in the code of the “You Win” and “Game Over” screens stating that sound should not play since it is equal to false, but if the player wins or loses the variable ```isSoundPlaying```  should equal true. I then realized that when I play the game the first time the win or lose sound effect works. However, when I restart the game the sound effects don’t play. I had to include the sounds in the code where I created the restart key. I attempted to put the ``` winSound.play();``` and ```lostSound.play();``` functions in that code but it didn’t work. I kept playing around with a couple of ways but nothing worked. Lastly, I tried adding the ```isSoundPlaying = false;``` and it worked. 
 
 ## How to start the game?
 
@@ -340,7 +340,23 @@ function doubleClicked() {
 
 ```
 
+## Game Instructions
+To add the instructions I used ```index.html``` file to write them on top of the canvas.
 
+```
+ </head>
+  <body>
+    <h1>Boat Maze Game</h1>
+    <h2>A storm is coming, you need to get to the island in time!
+    <h2>
+    <h2>Make sure to go over the island!
+    <h2>
+    <h3>To play use the arrow keys & To restart press "R" key <h3>
+
+```
+
+
+<img src= "https://github.com/FatemaAlhameli/Intro-to-IM-/blob/main/instructions.png" width = "250" height = "200">
 
 
 
