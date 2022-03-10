@@ -1,7 +1,7 @@
 
 # Documentation 1
 
-[Current Game Code](https://editor.p5js.org/FatemaAlhameli/sketches/Xb1WhnNOB)
+[Maze Generator Code](https://editor.p5js.org/FatemaAlhameli/sketches/Xb1WhnNOB)
 
 ### Midterm Project Description and Plan:
 
