@@ -47,7 +47,7 @@ The timer is one of the important elements in my game. The purpose of the timer 
 
 <img src= "https://github.com/FatemaAlhameli/Intro-to-IM-/blob/main/Timer%20for%20maze.png" width = "250" height = "200"> 
 
-After the countdown timer, I added an if statement that specifies if the time is equal to zero and the player hasn't reached the island (endpoint), then they lose, so the “Game Over” screen would appear. The “Game Over” screen should appear only when the player hasn't reached the endpoint point, and they ran out of time. Visversa, I wrote an if statement that if the boat position is equal to the island position before the timer ends then the player wins. Thus, the “You Win”  screen appears.
+After the countdown timer, I wrote an if statement ```if (boat.x + 10 >= 255 && boat.y + 70 >= 400){}``` which means that if the boat position is equal to the island position before the timer ends then the player wins. Thus, the “You Win”  screen appears. Inside the curly brackets I added the mechanics and appearances of the "You Win" screen. Similarly, I added an else if statement ```else if (timer <= 0){} ``` that specifies if the time is equal to zero and the player hasn't reached the island (endpoint), then they lose, so the “Game Over” screen would appear. Inside the curly brackets are the mechanics and appearances of the "Game Over" screen. The “Game Over” screen should appear only when the player hasn't reached the endpoint point, and they ran out of time. 
 
 <img src= "https://github.com/FatemaAlhameli/Intro-to-IM-/blob/main/Game%20over.png" width = "250" height = "200">  <img src= "https://github.com/FatemaAlhameli/Intro-to-IM-/blob/main/you%20win%20screen.png" width = "250" height = "200">
 
