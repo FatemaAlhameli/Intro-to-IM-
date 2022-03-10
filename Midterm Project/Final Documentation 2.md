@@ -367,4 +367,6 @@ To add the instructions I used ```index.html``` file to write them on top of the
 * [Timer](https://editor.p5js.org/marynotari/sketches/S1T2ZTMp-)
 * [Center Canvas](https://editor.p5js.org/itp42/sketches/4yYMl2c3P)
 * [Start Screen](https://editor.p5js.org/itp42/sketches/hCa_xCoY5)
+* [Island Image](https://creazilla.com/da/sections/4-clipart/tags/648-oer)
+* [Sound Effects](https://mixkit.co/free-sound-effects/game/?page=2)
 
