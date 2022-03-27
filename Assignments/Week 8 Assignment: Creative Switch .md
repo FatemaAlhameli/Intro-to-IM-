@@ -1,5 +1,5 @@
 
-## Unusual Switch: Buttery Zipper Switch
+# Unusual Switch: Buttery Zipper Switch
 
 [Video Link](https://vimeo.com/692769130)
 
