@@ -20,3 +20,37 @@ To play around more with the drawing I added a random stroke weight, which gave 
 * Explore loops in different shapes and incorporate them 
 * Add animation to the ellipses, perhaps have them move up 
 * Smooth random size changes 
+
+## Code:
+
+```
+function setup() {
+  createCanvas(400, 400);
+}
+
+function draw() {
+  background(110, 110, 255);
+
+  for (let i = 0; i < width; i = i + 50) {
+    strokeWeight(random(1, 3));
+    line(0, i, i, height);
+  }
+  for (let i = 0; i < width; i = i + 50) {
+    line(0, height, i, i);
+  }
+
+  for (let i = 0; i < width; i = i + 50) {
+    line(height, i, i, 0);
+  }
+
+  for (let i = 0; i < width; i = i + 50) {
+    line(i, i, height, 0);
+  }
+  for (let i = 0; i < 20; i = i + 4) {
+    fill(0);
+    ellipse(i * 25, i * 25, 50);
+  }
+}
+
+
+```
