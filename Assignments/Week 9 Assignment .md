@@ -3,12 +3,12 @@
 
 [Digital Sensor Video](https://vimeo.com/695490494)
 
-[Analog sensor Video]()
+[Analog sensor Video](https://vimeo.com/695835271)
 
-For this assignment, I have created two sensors digital and analog with the aid of this week's class examples. For digital, I used the push button. The push-button function is that when is pushed a morse code would appear. The morse code spells out my name. When the push button is released the LED would remain on. For analog, I generated a photoresistor that turns on when it's dark (covered) and off when exposed to light. 
+For this assignment, I have created two sensors digital and analog with the aid of this week's class examples. For digital, I used the push button. The push-button function is that when it is pushed, a morse code would appear. The morse code spells out my name. When the push button is released, the LED remains on. For analog, I generated a photoresistor that turns on when it's dark (covered) and off when exposed to light. Ultimately, this acts as an emergency light and was my inspiration when creating this analog sensor. 
 
 
-<img src= "https://github.com/FatemaAlhameli/Intro-to-IM-/blob/main/LED%20Digital%202.jpg" width = "350" height = "400">    <img src= "https://github.com/FatemaAlhameli/Intro-to-IM-/blob/main/LED%20Digital.jpg" width = "350" height = "400">   
+<img src= "https://github.com/FatemaAlhameli/Intro-to-IM-/blob/main/LED%20Digital%202.jpg" width = "350" height = "400">  <img src= "https://github.com/FatemaAlhameli/Intro-to-IM-/blob/main/Analog%201.jpg" width = "350" height = "400">     
 
 ## Process
 
@@ -24,6 +24,9 @@ This worked and was successful on Tinkercad, but when I created the same thing o
 
 
 #### Result: 
+[Digital Sensor Video](https://vimeo.com/695490494)
+
+ <img src= "https://github.com/FatemaAlhameli/Intro-to-IM-/blob/main/LED%20Digital.jpg" width = "350" height = "400">   
 
 ## Code: 
 ```
@@ -86,15 +89,82 @@ void switchLED( int timing){
   delay(shortTime);
 }
 ```
-#### Analog:
+#### Analog (Emergency Light):
 
 [Tinkercad simulation](https://www.tinkercad.com/things/6ag6zDRdWbg-tremendous-luulia/editel?tenant=circuits)
 
-I used a photoresistor to turn on/off the LED light for my analog sensor. By using the [Ardunio reference](https://create.arduino.cc/projecthub/siddh-1/turn-on-off-of-led-with-photoresistor-27a206) for code and circuit guidance, I was able to make the photoresistor work. On the breadboard, I added my photoresistor and connected it to a ten kΩ resistor that connected to GND as well as two wires that connect to 5V and A0. I included a red LED that has a  330Ω resistor that is connected to GND and number 13 on the Arduino.  For the code, I first initialized the LED I am using, the analog input, and the value that is equal to zero. In setup, I use ```pinMode``` to make the LED output and the photoresistor as an input. Throughout the code, Serial print is used to track the value of the photoresistor. In loop an if statement is included that says if the value of the photoresistor less than 50 then the LED should turn on, else it should be off.  This code works due to ```analogRead``` and the ```Serial.println``` throughout the whole algorithm. 
+For this sensor I was inspired by the emergency lights that are located in parking lots. These emergency lights turn on when all the other main lights turn off. I used a photoresistor to turn on/off the LED light for my analog sensor. When the photoresisitor senses the dark it turns on the LED and when exposed to light it turns off.  By using the [Ardunio reference](https://create.arduino.cc/projecthub/siddh-1/turn-on-off-of-led-with-photoresistor-27a206) for code and circuit guidance, I was able to make the photoresistor work. On the breadboard, I added my photoresistor and connected it to a ten kΩ resistor that connected to GND as well as two wires that connect to 5V and A0. I included a red LED that has a  330Ω resistor that is connected to GND and number 13 on the Arduino.  For the code, I first initialized the LED I am using, the analog input, and the value that is equal to zero. In setup, I use ```pinMode``` to make the LED output and the photoresistor as an input. Throughout the code, Serial print is used to track the value of the photoresistor. In loop an if statement is included that says if the value of the photoresistor less than 50 then the LED should turn on, else it should be off.  This code works due to ```analogRead``` and the ```Serial.println``` throughout the whole algorithm. 
 
 #### Result: 
+[Analog sensor Video](https://vimeo.com/695835271)
+
+<img src= "https://github.com/FatemaAlhameli/Intro-to-IM-/blob/main/Analog%202.jpg" width = "350" height = "400">   
 
 ## Code: 
+
+```
+const int ldrsen = A0;
+
+int Led = 13;
+int value = 0;
+
+
+void setup() {
+  // put your setup code here, to run once:
+  delay(2000);
+  Serial.begin(9600);
+  pinMode(Led, OUTPUT); 
+  pinMode(ldrsen, INPUT);
+
+  Serial.println("======Starting the Test======");
+  Serial.println("You should see the Led blinking every 2 sec");
+  digitalWrite(Led, HIGH);
+  delay(200);
+  digitalWrite(Led, LOW);
+  delay(200);
+
+  Serial.println("Test 1 is completed");
+  Serial.println("Now testing the Photoresistor, Make sure it is connected to the Pin A0");
+  delay(2000);
+  Serial.println("Starting the test now!");   
+
+   rerun:
+  value = analogRead(ldrsen) /4;
+
+    if(value >1){
+    Serial.print("The Photoresistor is connected and here are some value: ");
+    delay(200);
+    Serial.println(value); 
+    }
+    else{
+      value = analogRead(ldrsen)/4 ;
+        if(value<0)
+          Serial.println("Hmm the Photoresistor is not connected");
+          Serial.println("Retrying in 5s");
+          delay(5000);
+          goto rerun;
+        }
+          Serial.println("======END======");    
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+  value = analogRead(ldrsen)/4;
+  Serial.println(value);
+  delay(10);
+    if(value < 50){
+    digitalWrite(Led, HIGH);
+  }else{
+    digitalWrite(Led, LOW);
+  }
+
+
+
+
+}
+
+
+```
 
 ## Challenges
 
