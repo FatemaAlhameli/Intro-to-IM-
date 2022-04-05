@@ -176,6 +176,7 @@ This homework assignment was one of the homework I faced many difficulties with.
 * Perhaps have the LED fading quickly instead of blinking the morse code.
 
 * For the photoresistor, try and make it also blink in morse code. 
+* Improve consistency of photoresistor
 
 ## References: 
 [Ardunio Fading Reference](https://www.arduino.cc/en/Tutorial/BuiltInExamples/Fading)
