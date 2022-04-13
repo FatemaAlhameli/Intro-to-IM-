@@ -1,12 +1,14 @@
 
 # Musical Instrument
-[Final Result Video]()
+[Final Result Video 1](https://vimeo.com/698949033)
+
+[Final Result Video 2](https://vimeo.com/698949077)
 
 In this assignment, My partner Meera and I created a musical instrument with lime. Through brainstorming our ideas, we have seen examples of people creating similar things with bananas. We looked for fruits that conduct electricity, and we came across citrus fruits. Therefore, we chose limes as they are small and easily portable. Using thick slices of lime, we attached alligator clips to the juice sac of each lime. The alligator clips on the limes are attached to separate resistors, then connected to the ardunio. The instrument functions by the user making contact with a black wire that is connected to GND. Once the user touches the metal tip on the wire and then proceeds to use their other hand to touch one of the limes from the inside, the buzzer speaker activates. 
 
 ## Process: 
 
-To create our musical instrument, we used two references [1](https://create.arduino.cc/projecthub/Heathen_Hacks-v2/playing-tones-using-bananas-c4c1ff) and [2](). The first reference helped us with writing our code and the second with creating the circuit. To create the circuit we first used six resistors. Compared to class exercises, the resistors were attached differently on the circuit. All six resistors were placed vertically and into two groups of three; however, the top part of each resistor was aligned vertically on the same line, and the bottom part of the resistors was aligned horizontally on the same line. The image below shows the structure of the resistors:
+To create our musical instrument, we used two references [1](https://create.arduino.cc/projecthub/Heathen_Hacks-v2/playing-tones-using-bananas-c4c1ff) and [2](https://www.jameco.com/Jameco/workshop/JamecoBuilds/banana-piano.html). The first reference helped us with writing our code and the second with creating the circuit. To create the circuit we first used six resistors. Compared to class exercises, the resistors were attached differently on the circuit. All six resistors were placed vertically and into two groups of three; however, the top part of each resistor was aligned vertically on the same line, and the bottom part of the resistors was aligned horizontally on the same line. The image below shows the structure of the resistors:
 
 <img src= "https://github.com/FatemaAlhameli/Intro-to-IM-/blob/main/Instrument%201.jpg" width = "350" height = "400"> 
 
@@ -15,6 +17,8 @@ At the bottom of each resistor, we used a wire to connect the resistors to separ
 [Video of instrument without potentiometer](https://vimeo.com/698659112)
 
 For our analog sensor, we decided to use a potentiometer. The initial idea we had was to use a potentiometer to adjust the volume of the buzzer. But due to a lot of complications, that didn't seem to work. Therefore, we used the potentiometer to adjust the frequency difference of the notes. To do this, we first attached the sensor to our circuit with a 5V wire, analog input wire(A5), and GND wire. To include the sensor we had to remove one of our limes to have space for the sensor. In our code, we used a variable called ```knobValue``` to read the tone values. Following it, we initialized the variable ```freq``` and next to it added the map code, which first included the ```knobValue``` , then the value of the potentiometer (0 - 1023), lastly, the frequency value (0 - 50). Then in each tone code that is in the if statement, we added ```+ freq```. Ultimately when the potentiometer is turned while the lime is playing the speaker, you can listen to the tone frequency change. 
+
+[Video of instrument with potentiometer](https://vimeo.com/698949077)
 
 <img src= "https://github.com/FatemaAlhameli/Intro-to-IM-/blob/main/Instrument%202.jpg" width = "420" height = "390">  <img src= "https://github.com/FatemaAlhameli/Intro-to-IM-/blob/main/fa20a78a-ad3a-4586-a646-15dfb92719d1.jpg" width = "420" height = "390">   
                    <img src= "https://github.com/FatemaAlhameli/Intro-to-IM-/blob/main/Instrument%204.jpg" width = "300" height = "350">   
@@ -75,3 +79,6 @@ void loop() {
 ## Next Steps: 
 
 ## References: 
+
+* [Instrument Code](https://create.arduino.cc/projecthub/Heathen_Hacks-v2/playing-tones-using-bananas-c4c1ff)
+* [Instrument Cricut](https://www.jameco.com/Jameco/workshop/JamecoBuilds/banana-piano.html)
