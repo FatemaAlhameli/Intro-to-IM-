@@ -75,10 +75,13 @@ void loop() {
 ```
 
 ## Challenges:
+The main challenge we faced during the process of creating our musical instrument was trying to incorporate the potentiometer. We initially wanted the potentiometer sensor to control the volume of the buzzer when the limes play the notes. However, this was a bit difficult to make. When we connected the wires and added the code for it, the buzzer would immediately turn on without stopping every time we ran the code. We tried looking at examples as well as other references and adjusting the code, but it still didn't seem to work. Therefore, we decided to let the potentiometer in control of something else, which was the frequency of the tone. As explained in our process, this was a nice and interesting addition to our instrument. 
 
-## Outcomes:
 
-## Next Steps: 
+## Outcomes and Next Steps: 
+This particular assignment was very interesting and insightful for me. My understanding of Ardunio and coding increased significantly as a result of this assignment. As such, I am more confident about working with it and with the different sensors we have. The next step for this mini-project is to include additional sensors that could control elements such as value as well as incorporate a p5 code with it that would make it more interactive and fun.
+
+
 
 ## References: 
 
