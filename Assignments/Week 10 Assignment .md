@@ -6,6 +6,8 @@
 
 In this assignment, My partner Meera and I created a musical instrument with lime. Through brainstorming our ideas, we have seen examples of people creating similar things with bananas. We looked for fruits that conduct electricity, and we came across citrus fruits. Therefore, we chose limes as they are small and easily portable. Using thick slices of lime, we attached alligator clips to the juice sac of each lime. The alligator clips on the limes are attached to separate resistors, then connected to the ardunio. The instrument functions by the user making contact with a black wire that is connected to GND. Once the user touches the metal tip on the wire and then proceeds to use their other hand to touch one of the limes from the inside, the buzzer speaker activates. 
 
+ <img src= "https://github.com/FatemaAlhameli/Intro-to-IM-/blob/main/Outcasing%20Week%2010.jpg" width = "520" height = "390">   
+
 ## Process: 
 
 To create our musical instrument, we used two references [1](https://create.arduino.cc/projecthub/Heathen_Hacks-v2/playing-tones-using-bananas-c4c1ff) and [2](https://www.jameco.com/Jameco/workshop/JamecoBuilds/banana-piano.html). The first reference helped us with writing our code and the second with creating the circuit. To create the circuit we first used six resistors. Compared to class exercises, the resistors were attached differently on the circuit. All six resistors were placed vertically and into two groups of three; however, the top part of each resistor was aligned vertically on the same line, and the bottom part of the resistors was aligned horizontally on the same line. The image below shows the structure of the resistors:
