@@ -149,7 +149,7 @@ Using the potentiometer the wind direction of the ball can be moved. The wind di
 
 <img src= "https://github.com/FatemaAlhameli/Intro-to-IM-/blob/main/exercise%203.jpg" width = "520" height = "520">   
 
-Arduino Code:
+## Arduino Code:
 ```
 const int POT = A0;
 const int LED = 3;
@@ -185,7 +185,7 @@ void loop() {
 
 }
 ```
-P5 Code:
+## P5 Code:
 ```
 let serial;
 let latestData = "waiting for data";
