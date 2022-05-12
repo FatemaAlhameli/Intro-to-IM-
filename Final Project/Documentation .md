@@ -316,7 +316,7 @@ function readSerial(data) {
 <img src= "https://github.com/FatemaAlhameli/Intro-to-IM-/blob/main/Final%20Project/box.png" width = "320" height = "400"><img src= "https://github.com/FatemaAlhameli/Intro-to-IM-/blob/main/Final%20Project/Sparying%20box.png" width = "320" height = "400"> 
 
 #### Final result
-<img src= "https://github.com/FatemaAlhameli/Intro-to-IM-/blob/main/Final%20Project/soldering%20in%20box.jpegg" width = "370" height = "320"> 
+<img src= "https://github.com/FatemaAlhameli/Intro-to-IM-/blob/main/Final%20Project/soldering%20in%20box.jpeg" width = "370" height = "320"> 
 
 <img src= "https://github.com/FatemaAlhameli/Intro-to-IM-/blob/main/Final%20Project/Screen%20Shot%202022-05-12%20at%206.02.01%20PM.png" width = "370" height = "320">   <img src= "https://github.com/FatemaAlhameli/Intro-to-IM-/blob/main/Final%20Project/enclosing%202.png" width = "370" height = "320"> 
 
@@ -326,9 +326,11 @@ function readSerial(data) {
 
 ## User Experiences During Showcase
 
-[Video 1](https://vimeo.com/709125143)
-[Video 2](https://vimeo.com/709125097)
-[Video 3](https://vimeo.com/709125044)
+Some snippets of the showcase visitors trying out our graffiti wall:
+
+* [Video 1](https://vimeo.com/709125143)
+* [Video 2](https://vimeo.com/709125097)
+* [Video 3](https://vimeo.com/709125044)
 
 
 ## My Contributions
