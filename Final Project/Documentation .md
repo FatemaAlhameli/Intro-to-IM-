@@ -69,3 +69,4 @@ To upload our image, sound, and font, we used the preload function. To upload th
 * [Spray Effect](https://www.dongphilyoo.com/archive/blog/itp/icm/icm-week6-p5-js-serial-port-communication-with-arduino/)
 * [About Joystick Sensor](https://create.arduino.cc/projecthub/MisterBotBreak/how-to-use-a-joystick-with-serial-monitor-1f04f0) 
 * [P5 Reference](https://p5js.org/reference/)
+* [Spray Sound Effect](https://www.soundsnap.com/tags/spray_paint)
