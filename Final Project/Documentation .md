@@ -316,6 +316,8 @@ function readSerial(data) {
 <img src= "https://github.com/FatemaAlhameli/Intro-to-IM-/blob/main/Final%20Project/box.png" width = "320" height = "400"><img src= "https://github.com/FatemaAlhameli/Intro-to-IM-/blob/main/Final%20Project/Sparying%20box.png" width = "320" height = "400"> 
 
 #### Final result
+<img src= "https://github.com/FatemaAlhameli/Intro-to-IM-/blob/main/Final%20Project/soldering%20in%20box.jpegg" width = "370" height = "320"> 
+
 <img src= "https://github.com/FatemaAlhameli/Intro-to-IM-/blob/main/Final%20Project/Screen%20Shot%202022-05-12%20at%206.02.01%20PM.png" width = "370" height = "320">   <img src= "https://github.com/FatemaAlhameli/Intro-to-IM-/blob/main/Final%20Project/enclosing%202.png" width = "370" height = "320"> 
 
 ## Challenges
@@ -324,10 +326,10 @@ function readSerial(data) {
 
 ## User Experiences During Showcase
 
-[Video 1]()
-[Video 2]()
-[Video 3]()
-[Video 4]()
+[Video 1](https://vimeo.com/709125143)
+[Video 2](https://vimeo.com/709125097)
+[Video 3](https://vimeo.com/709125044)
+
 
 ## My Contributions
 For my contribution, I worked partially on the Arduino and the P5 code. I also worked on the soldering and encasing. My partner Meera and I did most of the work together and not separately. This way, we were able to complete most tasks of the project effectively and efficiently. Personally, I believe I really learned more about the process of sending from Arduino to P5. While practicing this in class I did learn a lot but while doing it constantly throughout the final project I became more confident with it.
