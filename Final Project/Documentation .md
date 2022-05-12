@@ -310,6 +310,9 @@ function readSerial(data) {
 
 ## Next Steps
 
+## My Contributions
+For my contribution, I worked partially on the Arduino and the P5 code. I also worked on the soldering and encasing. My partner Meera and I did most of the work together and not separately. This way, we were able to complete most tasks of the project effectively and efficiently. Personally, I believe I really learned more about the process of sending from Arduino to P5. While practicing this in class I did learn a lot but while doing it constantly throughout the final project I became more confident with it.
+
 ## References: 
 
 * [WEB SERIAL p5 ARDUINO](https://editor.p5js.org/itp42/sketches/KDPs5Rl-P)
