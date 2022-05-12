@@ -11,10 +11,11 @@
 
 ## Concept Description 
 
+[Video Demo of Final Project](https://vimeo.com/709105224)
 
 
 
-
+<img src= "https://github.com/FatemaAlhameli/Intro-to-IM-/blob/main/Final%20Project/Screen%20Shot%202022-05-12%20at%206.02.01%20PM.png" width = "370" height = "320">   <img src= "https://github.com/FatemaAlhameli/Intro-to-IM-/blob/main/Final%20Project/enclosing%202.png" width = "370" height = "320"> 
 
 ## Ardunio Code Explanation
 In our Arduino code, we first begin with initializing the pin numbers for our sensors. For instance, the six buttons for color changing are plugged into pins 2 - 7, and the x and y values of the joystick are plugged into A0 and A1 as it is an analog sensor. Also, the switch(SW) of the joystick, which is like a momentary button, is plugged into pin 8. Lastly, our last sensor, which is the force sensor, is plugged into the analog pin A2. We also declared variables that will store the values of these sensors. For example, ```xPosition``` and ```yPosition``` store the x and y values of the joystick sensor as it is used. For the buttons, we created a separate variable for each colored button like rvalue, bvalue, etc. 
@@ -127,6 +128,8 @@ To make it seem as if the user is drawing with spray paint on the graffiti wall 
 
 #### Switch in the joystick
 We realized that the spray effect began immediately after we ran the code. So we wanted to change that by using the switch in the joystick. This was simple to add in the p5 code. The values of this switch are stored in the variable ```SWstate```. While printing the values of the switch in Ardunio, we saw that the value of the switch when pressed is 0 and 1 when it's not. Therefore, in draw, we added an if statement that indicates if the switch value is 0, then we put all the code for the joystick inside. Therefore, only when the switch is pressed can the user draw with it.  
+
+[Drawing with Joystick Video](https://vimeo.com/709107962)
 
 #### Buttons for color change 
 Next, we added buttons to enable the change of the spray color. The initial color that is set for the drawing is grey. The buttons have values 0 or 1. zero means off, and one means on. For each colored button, we created a variable to store these two values. To take the red button value as an example, we added an if statement for it in draw that states if the button's value equals one, then the fill color should be red. We proceeded to do the same thing for all six colored buttons. The color that is selected is shown in the text that is on the canvas and everytime it is changes the text color changes. 
@@ -306,9 +309,24 @@ function readSerial(data) {
 
 ## Enclosure and Soldering
 
+<img src= "https://github.com/FatemaAlhameli/Intro-to-IM-/blob/main/Final%20Project/wiring.png" width = "370" height = "320"> <img src= "https://github.com/FatemaAlhameli/Intro-to-IM-/blob/main/Final%20Project/soldered%20breadboards.png" width = "370" height = "320"> 
+
+<img src= "https://github.com/FatemaAlhameli/Intro-to-IM-/blob/main/Final%20Project/Enclosure%20planning.jpeg" width = "450" height = "360"> 
+<img src= "https://github.com/FatemaAlhameli/Intro-to-IM-/blob/main/Final%20Project/Sparying%20box.png" width = "320" height = "400"> 
+
+#### Final result
+<img src= "https://github.com/FatemaAlhameli/Intro-to-IM-/blob/main/Final%20Project/Screen%20Shot%202022-05-12%20at%206.02.01%20PM.png" width = "370" height = "320">   <img src= "https://github.com/FatemaAlhameli/Intro-to-IM-/blob/main/Final%20Project/enclosing%202.png" width = "370" height = "320"> 
+
 ## Challenges
 
 ## Next Steps
+
+## User Experiences During Showcase
+
+[Video 1]()
+[Video 2]()
+[Video 3]()
+[Video 4]()
 
 ## My Contributions
 For my contribution, I worked partially on the Arduino and the P5 code. I also worked on the soldering and encasing. My partner Meera and I did most of the work together and not separately. This way, we were able to complete most tasks of the project effectively and efficiently. Personally, I believe I really learned more about the process of sending from Arduino to P5. While practicing this in class I did learn a lot but while doing it constantly throughout the final project I became more confident with it.
