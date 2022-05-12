@@ -23,6 +23,89 @@ In void setup, we used the ```pinMode``` command to set each of the sensors as e
 The final step in the Ardunio code is to send it to P5. previously we did this step using P5 serial control. However, we were given an alternative for P5 serial control as it was a lengthy process. This new process is a web serial p5 Ardunio. Thus, we don't have to deal with anything out of these two programs. From the Ardunio side, all we have to do is print the values of each sensor. Therefore, in setup, we put the ```Serial.begin(9600);```. Then in loop we put ```Serial.print``` for all the value variables of the sensors and made sure to print commas in between in order for us to see the values in an organized manner. Ultimately, when we run the code in Ardunio and open the serial monitor, we can see the correct values of each sensor. 
 
 ```
+int VRx = A0;
+int VRy = A1;
+int xPosition = 0;
+int yPosition = 0;
+int SW = 8;
+int SWstate = 0;
+
+int FS = A2;
+int FSvalue = 0;
+
+int RbuttonPin = 7;
+int GbuttonPin = 5;
+int BbuttonPin = 2;
+int PUbuttonPin = 4;
+int PbuttonPin = 6;
+int BLbuttonPin = 3;
+
+int rValue = 0;
+int gValue = 0;
+int bValue = 0;
+int puValue = 0;
+int pValue = 0;
+int blValue = 0;
+
+void setup() {
+
+  Serial.begin(9600);
+
+  // Joystick to draw
+  pinMode(VRx, INPUT);
+  pinMode(VRy, INPUT);
+  pinMode(FS, INPUT);
+
+  //Color buttons for spray paint
+  pinMode(RbuttonPin, INPUT);
+  pinMode(GbuttonPin, INPUT);
+  pinMode(BbuttonPin, INPUT);
+  pinMode(PbuttonPin, INPUT);
+  pinMode(PUbuttonPin, INPUT);
+  pinMode(BLbuttonPin, INPUT);
+  pinMode(SW, INPUT_PULLUP);
+}
+
+void loop() {
+  //Reading the values of the sensors and storing in variables 
+  xPosition = analogRead(VRx);
+  yPosition = analogRead(VRy);
+  SWstate = digitalRead(SW);
+
+  FSvalue = analogRead(FS);
+
+  rValue = digitalRead(RbuttonPin);
+  gValue = digitalRead(GbuttonPin);
+  bValue = digitalRead(BbuttonPin);
+  puValue = digitalRead(PUbuttonPin);
+  pValue = digitalRead(PbuttonPin);
+  blValue = digitalRead(BLbuttonPin);
+
+  // Printing values to send to P5
+  Serial.print(xPosition);
+  Serial.print(",");
+  Serial.print(yPosition);
+  Serial.print(",");
+  Serial.print(rValue);
+  Serial.print(",");
+  Serial.print(puValue);
+  Serial.print(",");
+  Serial.print(pValue);
+  Serial.print(",");
+  Serial.print(gValue);
+  Serial.print(",");
+  Serial.print(bValue);
+  Serial.print(",");
+  Serial.print(blValue);
+  Serial.print(",");
+  Serial.print(FSvalue);
+  Serial.print(",");
+  Serial.println(SWstate);
+
+
+
+  delay(100);
+}
 
 ```
 
@@ -54,6 +137,169 @@ The last sensor we added was a force sensor to allow the user to reset and erase
 To upload our image, sound, and font, we used the preload function. To upload the image in setup, we used the image syntax where we added the image we uploaded and the XY coordinates and size. For the size, we set it as ```windowWidth``` and ```windowHeight``` as that is what we set our canvas size too. For the text, we used the text syntax where we added the text we wanted and its XY coordinates. We also used ```textFont(font)``` to ensure the font works. The sound we had minor obstacles with. When we uploaded it, the sound quality was horrible, but we realized why after the professor pointed out we had it in draw instead of loop. However, we couldn't move it to loop because the sound was meant to play when the joystick switch was pressed and drawn with. Therefore, the professor recommended we create a new variable called ```pSWstate``` and set it equal to one. In the ```readSerial``` function we added an if statement specifying that if ```pSWstate``` is less than ```SWstate``` then the sound should stop. Else if the ```pSWstate``` is larger than the ```SWstate```then the sound should play. In other words, if the switch is pressed and its value becomes 0, then the ```pSWstate``` becomes larger, so the sound plays. 
 
 ```
+let xPosition = 1023 / 2;
+let yPosition = 1023 / 2;
+let mapX = 200;
+let mapY = 200;
+diameter = 10;
+let pX = 0, pY = 0;
+let rvalue = 0;
+let gvalue = 0;
+let bvalue = 0;
+let puvalue = 0;
+let pvalue = 0;
+let blvalue = 0;
+let FSvalue = 0;
+let SWstate = 1;
+let pSWstate = 1;
+let brickWall;
+let spraySound;
+let font; 
+
+// preload function to upload the brick wall image, spray sound effects, and font
+function preload() {
+  brickWall = loadImage("assets/white-brick-wall-bg.webp");
+  spraySound = loadSound("assets/Spray Effect Sound.mp3");
+  font = loadFont("assets/AttackGraffiti-ZVJPZ.otf")
+}
+
+function setup() {
+  createCanvas(windowWidth, windowHeight);
+  // background(220);
+  fill(99, 97, 99);
+  image(brickWall, 0, 0, windowWidth, windowHeight);
+  textFont(font);
+}
+
+function draw() {
+ 
+  // the text on top of the canvas 
+  textSize(60)
+  textAlign(CENTER, TOP);
+  text("Graffiti Wall", 710, 20);
+ 
+
+
+  // if the joystick is pushed down you are able to draw with it
+  if (SWstate == 0 && serialActive) {
+    //Joystick
+    pX = mapX;
+    pY = mapY;
+    tempX = map(xPosition, 0, 1023, -7, 7); //reads the values of the x values in the joystick
+    tempY = map(yPosition, 0, 1023, -7, 7); //reads the values of the y values in the joystick
+    mapX = mapX + tempX;
+    mapY = mapY + tempY;
+    // print(mapX, mapY);
+    spray(mapX, mapY); // call the function spray to be using with the values of the joystick
+  }
+
+  //fill color of buttons
+  if (rvalue == 1) {
+    fill(212, 95, 93); //red
+  }
+  if (gvalue == 1) {
+    fill(140, 230, 176); //green
+  }
+  if (bvalue == 1) {
+    fill(151, 192, 252); //blue
+  }
+  if (puvalue == 1) {
+    fill(139, 83, 163); //purple
+  }
+  if (pvalue == 1) {
+    fill(217, 126, 206); //pink
+  }
+  if (blvalue == 1) {
+    fill(0, 0, 0); //black
+  }
+
+  //reading force sensor values and resets canvas by adding a new image on top
+  if (FSvalue > 400) {
+    image(brickWall, 0, 0, windowWidth, windowHeight);
+  }
+}
+
+// spray effect function
+function spray(mapX, mapY) {
+  
+  stroke(0);
+  radiusHigh = diameter * 0.5;
+  
+  // if the diameter is more than zero ellipse are drawn at a random angle, radius, and distance 
+  if (diameter > 0) {
+    for (let i = 0; i <= 1000; i++) {
+      let angle = random(TWO_PI);
+      let radius = random(0, radiusHigh);
+
+      noStroke();
+      ellipse(
+        mapX + radius * cos(angle),
+        mapY + radius * sin(angle),
+        random(1.2),
+        random(1.2)
+      );
+    }
+  }
+  
+// diameter increases when mapX and mapY values are not changing 
+  if (diameter > 0 && mapX == mapX) {
+    for (let i = 0; i <= 1200; i++) {
+      let angle = random(TWO_PI);
+      radiusHigh = radiusHigh + 0.032;
+      let radius = random(0, radiusHigh);
+      ellipse(
+        mapX + radius * cos(angle),
+        mapY + radius * sin(angle),
+        random(1.2),
+        random(1.2)
+      );
+    }
+  }
+}
+
+// use keypressed to connect to the correct port
+function keyPressed() {
+  if (key == " ") {
+    // important to have in order to start the serial connection!!
+    setUpSerial();
+  }
+}
+
+function readSerial(data) {
+  
+  pSWstate = SWstate;
+  // make sure there is actually a message
+  // split the message
+  let fromArduino = split(trim(data), ",");
+  // if the right length, then proceed
+  if (fromArduino.length == 10) {
+    // only store values here
+    // do everything with those values in the main draw loop
+    xPosition = fromArduino[0];
+    yPosition = fromArduino[1];
+    rvalue = fromArduino[2];
+    puvalue = fromArduino[3];
+    pvalue = fromArduino[4];
+    gvalue = fromArduino[5];
+    bvalue = fromArduino[6];
+    blvalue = fromArduino[7];
+    FSvalue = fromArduino[8];
+    SWstate = fromArduino[9];
+  }
+
+  //////////////////////////////////
+  //SEND TO ARDUINO HERE (handshake)
+  //////////////////////////////////
+  writeSerial("x");
+  
+  //plays the spray effect sound only when the button in the joystick if pressed 
+  if (pSWstate < SWstate) {
+    spraySound.stop();
+  } else if (pSWstate > SWstate) {
+    spraySound.play();
+  }
+
+}
 
 ```
 
@@ -70,3 +316,5 @@ To upload our image, sound, and font, we used the preload function. To upload th
 * [About Joystick Sensor](https://create.arduino.cc/projecthub/MisterBotBreak/how-to-use-a-joystick-with-serial-monitor-1f04f0) 
 * [P5 Reference](https://p5js.org/reference/)
 * [Spray Sound Effect](https://www.soundsnap.com/tags/spray_paint)
+* [Brick Wall Image](https://www.freepik.com/photos/white-brick-wall-texture)
+* [Graffiti Text Font](https://www.dafont.com/theme.php?cat=606)
