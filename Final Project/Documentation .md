@@ -311,8 +311,9 @@ function readSerial(data) {
 
 <img src= "https://github.com/FatemaAlhameli/Intro-to-IM-/blob/main/Final%20Project/wiring.png" width = "370" height = "320"> <img src= "https://github.com/FatemaAlhameli/Intro-to-IM-/blob/main/Final%20Project/soldered%20breadboards.png" width = "370" height = "320"> 
 
-<img src= "https://github.com/FatemaAlhameli/Intro-to-IM-/blob/main/Final%20Project/Enclosure%20planning.jpeg" width = "450" height = "360"> 
-<img src= "https://github.com/FatemaAlhameli/Intro-to-IM-/blob/main/Final%20Project/Sparying%20box.png" width = "320" height = "400"> 
+<img src= "https://github.com/FatemaAlhameli/Intro-to-IM-/blob/main/Final%20Project/Enclosure%20planning.jpeg" width = "480" height = "380"> 
+
+<img src= "https://github.com/FatemaAlhameli/Intro-to-IM-/blob/main/Final%20Project/box.png" width = "320" height = "400"><img src= "https://github.com/FatemaAlhameli/Intro-to-IM-/blob/main/Final%20Project/Sparying%20box.png" width = "320" height = "400"> 
 
 #### Final result
 <img src= "https://github.com/FatemaAlhameli/Intro-to-IM-/blob/main/Final%20Project/Screen%20Shot%202022-05-12%20at%206.02.01%20PM.png" width = "370" height = "320">   <img src= "https://github.com/FatemaAlhameli/Intro-to-IM-/blob/main/Final%20Project/enclosing%202.png" width = "370" height = "320"> 
