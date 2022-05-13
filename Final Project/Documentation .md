@@ -11,6 +11,8 @@
 
 ## Concept Description 
 
+Our project is a graffiti wall. To interact with the digital part of the project there are 6 push buttons, 1 joystick & 1 force sensor. The user can use the force sensor to reset their drawing,the push buttons to change color, and the joystick to move and paint. They are enclosed in a box and the force sensor is on the ground so you can step and erase. Using this requires the use of both hands and your feet and this was something we wanted to focus on. We knew we somehow wanted our body to be interacting with the project in more ways than one and we couldn't get it right. But as we were working on the project we realized this is the perfect way to do this.
+
 [Video Demo of Final Project](https://vimeo.com/709105224)
 
 
@@ -309,9 +311,12 @@ function readSerial(data) {
 
 ## Enclosure and Soldering
 
-<img src= "https://github.com/FatemaAlhameli/Intro-to-IM-/blob/main/Final%20Project/wiring.png" width = "370" height = "320"> <img src= "https://github.com/FatemaAlhameli/Intro-to-IM-/blob/main/Final%20Project/soldered%20breadboards.png" width = "370" height = "320"> 
+We had many different wres as we had quite a few sensors so soldering was definitely a process. We didn't know the most efficient ways to solder so we found ourselves spending 3 hours on soldering. However we did find that when we were both soldering together we finished much more quickly. Since we had 6 buttons they took an entire normal sized breadboard and to make the user experience better used 2 small breadboards. We were thinking of using 1 large one but since they were not connected we knew that would slow us down significantly and confuse us along the way as we didnt have any prior experience with a large breadboard with no connections. When soldering we needed to be precise and we made a couple mistakes on the way but thankfully we melted it off and used the suction thing to clean it up. This was bound to happen since we were soldering a lot in one tiny breadboard. For the enclosure we spray painted the box a textured stone to give it an off the streets look, we painted some of the buttons using normal acrylic paint and we enclosed the force sensor in a mat we found in a house. We used heat shrink for the wires coming down to the force sensor and that step took us a lot of time. Again, since we didn't have much experience with it we didn't know the fastest ways to get it done so it took us a while to figure out. After painting all our pieces and soldering it all it was time to place it in the box. We realized we had measured too tight in some places so we used the wood shop to help us efficiently get it done.
 
 <img src= "https://github.com/FatemaAlhameli/Intro-to-IM-/blob/main/Final%20Project/Enclosure%20planning.jpeg" width = "480" height = "380"> 
+
+<img src= "https://github.com/FatemaAlhameli/Intro-to-IM-/blob/main/Final%20Project/wiring.png" width = "370" height = "320"> <img src= "https://github.com/FatemaAlhameli/Intro-to-IM-/blob/main/Final%20Project/soldered%20breadboards.png" width = "370" height = "320"> 
+
 
 <img src= "https://github.com/FatemaAlhameli/Intro-to-IM-/blob/main/Final%20Project/box.png" width = "320" height = "400"><img src= "https://github.com/FatemaAlhameli/Intro-to-IM-/blob/main/Final%20Project/Sparying%20box.png" width = "320" height = "400"> 
 
@@ -321,8 +326,10 @@ function readSerial(data) {
 <img src= "https://github.com/FatemaAlhameli/Intro-to-IM-/blob/main/Final%20Project/Screen%20Shot%202022-05-12%20at%206.02.01%20PM.png" width = "370" height = "320">   <img src= "https://github.com/FatemaAlhameli/Intro-to-IM-/blob/main/Final%20Project/enclosing%202.png" width = "370" height = "320"> 
 
 ## Challenges
+One large challenge was the enclosure. We had a hard time making the box and a even harder time putting everything in to where its user friendly. Making the box took us about a half day but we ended up doing it and we were happy we put the time in to do so. With that done we thought we had most of the grunt work out of the way and the rest of the enclosure would be easy breezy. We then realized that we would have to put the joystick and the buttons in and in a way that the user can press down with some force and not break it apart. We first thought tape was the way to do this and after multiple tries trying different ways of aligning them we realized that it was not going to work for the joystick and it would only - sort of - work for the buttons. Another problem we faced close to the start of our project was that the joystick would just create a horizontal line to the side and wouldn't move. We fixed this by changing the numbers and even sometimes by just quitting arduino na dp5 and powering them up again.
 
 ## Next Steps
+Something we wanted to improve on is the overall look of our project. And a small feature we want to add is showing the user where the paint briggs is and making it easier for the user to move it around.
 
 ## User Experiences During Showcase
 
